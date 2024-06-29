@@ -10,8 +10,8 @@
     flex-direction: column;
     height: 100px;
     width: 100%;
-    background: rgb(34,67,195);
-    background: linear-gradient(40deg, rgba(34,67,195,1) 0%, rgba(170,48,223,1) 100%);
+    /* background: rgb(34,67,195);
+    background: linear-gradient(40deg, rgba(34,67,195,0.15) 0%, rgba(170,48,223,0.15) 100%); */
     font-family: "Chakra Petch", sans-serif;
     border-radius: 10px;
     z-index:10;
@@ -29,7 +29,7 @@
 .blogdetails{
     width: 100%;
     background: rgb(34,67,195);
-    background: linear-gradient(40deg, rgba(34,67,195,1) 0%, rgba(170,48,223,1) 100%);
+    background: linear-gradient(40deg, rgba(34,67,195,0.15) 0%, rgba(170,48,223,0.15) 100%);
     font-family: "Chakra Petch", sans-serif;
     padding: 2rem;
     margin-top: 1rem;
