@@ -1,79 +1,111 @@
 import React from "react";
 import img from "../../assets/img.jpg";
+import right from "../../assets/right.png";
+import image from "../../assets/image.png";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import facAdimg from "../../assets/bg_removed_amit_sethi.png"
 
 export default function Home() {
     return (
-        <div className="home">
+        <div className="hey">
             <div className="home1">
-                <div className="about">
-                    <h2>
-                    Crafting AI's Future, one idea at IITB
-                    </h2>
-                    <p>
-                    The official AI community of IIT-Bombay, we aim to elevate the AI ecosystem in IITB by organizing hackathons, projects, talks and reading groups.We work on participating in one of the best hackathons and competitions around the world. With our main aim on improving the research outputs of the community, we work on cutting-edge innovative projects in the field of AI covering all the subdomains : Vision, NLP, RL, etc.
-                    </p>
+                <div className="boxes">
+                    <div className="notbox first">
+                        <h1 className="box-heading">
+                        Crafting AI's Future,<br/> one idea at IITB
+                        </h1>
+                        <p className="description">
+                        The official AI community of IIT-Bombay, we aim to elevate the AI ecosystem in IITB by organizing hackathons, projects, talks and reading groups.
+                        </p>
+                    </div>
+                    <div className="notbox first">
+                        <h2>
+                        We are a group of AI enthusiasts aiming to produce world-class research outputs
+                        </h2>
+                    </div>
                 </div>
                 <div >
-                    <img src={img} alt="AI" />
+                    <img src={img} alt="AI" className="img" />
                 </div>
             </div>
             <div className="home2">
-                <div className="about">
-                We are a group of AI enthusiasts aiming to produce world-class research outputs
-                </div>
+                
                 <div className="work">
-                <div className="about">
-                    <h1>Data Science</h1>
-                    Unlock the potential of data. Delve into analysis, predictive modeling,
-                    and data-driven strategies. From business optimization to machine
-                    learning, turn information into actionable insights.
-                </div>
-                <div className="about">
-                    <h1>Reinforcement Learning</h1>
-                    Empowering intelligent decision-making. Dive into reinforcement
-                    learning, where machines learn and adapt through interactions with
-                    their environment. From robotics to game Al, we enable smarter
-                    choices.
-                </div>
-                <div className="about">
-                    <h1>Computer Vision</h1>
-                    Experience the future of visual intelligence in image recognition,
-                    object detection, and custom solutions, powering applications in
-                    healthcare, automotive, and more. Unleash the potential of visual
-                    data with us.
-                </div>
-                <div className="about">
-                    <h1>Linguistic Computation</h1>
-                    Explore the realm of language in linguistic computation covering
-                    natural language processing, sentiment analysis, and language
-                    models. From chatbots to content analysis, we turn language into
-                    actionable insights.
-                </div>
+                    <h1 className="heading-of-topics">
+                    Pillars of Modern Artificial Intelligence
+                    </h1>
+                    <div className="topics">
+                        <h1 className="box-heading">Data Science</h1>
+                        <p className="description">
+                        Unlock the potential of data. Delve into analysis, predictive modeling,
+                        and data-driven strategies. From business optimization to machine
+                        learning, turn information into actionable insights.
+                        </p>
+                    </div>
+                    <div className="topics ">
+                        
+                        <p className="description">
+                        Unlock the potential of data. Delve into analysis, predictive modeling,
+                        and data-driven strategies. From business optimization to machine
+                        learning, turn information into actionable insights.
+                        </p>
+                        <h1 className="box-heading">Reinforcement Learning</h1>
+                    </div>
+                    
+                        <div className="topics">
+                        <h1 className="box-heading">Computer Vision</h1>
+                        <p>
+                        Experience the future of visual intelligence in image recognition,
+                        object detection, and custom solutions, powering applications in
+                        healthcare, automotive, and more. Unleash the potential of visual
+                        data with us.
+                        </p>
+                    </div>
+                    <div className="topics">
+                        
+                        <p className="description">Explore the realm of language in linguistic computation covering
+                        natural language processing, sentiment analysis, and language
+                        models. From chatbots to content analysis, we turn language into
+                        actionable insights.</p>
+                        <h1 className="box-heading">Linguistic Computation</h1>
+                    </div>
                 </div>
             </div>
             <div className="home3">
-                <div className="about">
-                    <h2>
+                <div className="notbox">
+                    <h1 className="box-heading">
                         Explore our insightful blogs covering AI, ML and carrer opportunities in these fields
+                    </h1>
+                </div>
+                <Link to="/blogs">
+                <div className="notbox">
+                    <h2>
+                        Explore Blogs! <img className="rightarrow" src={right} alt="right" />
                     </h2>
                 </div>
+                </Link>
+            </div>
             
-            </div>
             <div className="home4">
-                {/* issue with image */}
-                <div className="about"> 
-                </div>
-               
-                               
-            </div>
-            <div className="home5">
-                <div className="about">
+                <div className="project">
+                <div className="notbox"> 
                     <h1>
+                        Get Ready to Start
+                        Your Project With Us
+                    </h1>
+                </div>
+                </div>
+                <img src={image} className="project-image" alt="tech" />
+                          
+            </div>
+            
+            <div className="home5">
+                <div className="notbox">
+                    <h1 className="box-heading">
                         Know the Faculty Advisor
                     </h1>
-                    <p>
+                    <p className="description">
                     Al Commmunity at IITB is adviced by Prof. Amit Sethi. He's the professor at Electrical
                     Engineering dept. of IIT-Bombay and an adjunct faculty at Dept. of Pathology at University of
                     Illinois, Chicago (UIC). His research interests lie in Deep learning, machine learning, image

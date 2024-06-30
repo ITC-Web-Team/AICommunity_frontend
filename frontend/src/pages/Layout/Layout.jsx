@@ -23,6 +23,7 @@ export default function Layout({children}) {
       <Navbar />
       <div className="base">
       {children}
+      <Footer />
       </div>
       </div>
       
@@ -33,7 +34,7 @@ export default function Layout({children}) {
                playsInline
                ref={videoRef}
                className="myVideo"/>
-      <Footer />        
+              
     </div>
   );
 }

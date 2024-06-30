@@ -11,7 +11,7 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     /* background: rgb(172, 178, 204); */
-    background: linear-gradient(40deg, rgba(34,67,195,1) 0%, rgba(170,48,223,1) 100%);
+    background: linear-gradient(40deg, rgba(34,67,195,0.15) 0%, rgba(170,48,223,0.15) 100%);
 }
 
 .project_item span{
