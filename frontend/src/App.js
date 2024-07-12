@@ -8,6 +8,7 @@ import Project from './pages/Project/project.jsx';
 import BlogDetails from './pages/blogsHome/BlogDetails.jsx';
 import Team from './pages/Team/Team.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
+import FacultyAdvisor from './pages/FacAd/FacAd.jsx';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/ourteam" element={<Team />} />
+          <Route path="/facad" element={<FacultyAdvisor/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
