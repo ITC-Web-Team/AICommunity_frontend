@@ -1,6 +1,6 @@
 import React from 'react';
-import './FacAd.css'; // Import the CSS file for styling
-import facAdimg from '../../assets/bg_removed_amit_sethi.png'; // Make sure to use the correct path for the image
+import './FacAd.css'; 
+import facAdimg from '../../assets/bg_removed_amit_sethi.png'; 
 
 const FacultyAdvisor = () => {
   return (
