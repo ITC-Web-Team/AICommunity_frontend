@@ -35,6 +35,7 @@ export default function Navbar() {
         <Link to="/blogs" className={`navbar__link ${active === 'blogs' && 'active'}`} onClick={() => updateActive('blogs')}> Blogs </Link>
         <Link to="/ourteam" className={`navbar__link ${active === 'team' && 'active'}`} onClick={() => updateActive('team')}> Our Team </Link>
         <Link to="/projects" className={`navbar__link ${active === 'projects' && 'active'}`} onClick={() => updateActive('projects')}> Projects </Link>
+        <Link to="/FacAd" className={`navbar__link ${active === 'FacAd' && 'active'}`} onClick={() => updateActive('FacAd')}> Faculty Advisor </Link>
       </div>
       <div className="navbar__toggle" onClick={handleToggle}><img src={menu} className="menu_logo"/></div>
     </div>

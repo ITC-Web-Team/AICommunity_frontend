@@ -100,25 +100,7 @@ export default function Home() {
                           
             </div>
             
-            <div className="home5">
-                <div className="notbox">
-                    <h1 className="box-heading">
-                        Know the Faculty Advisor
-                    </h1>
-                    <p className="description">
-                    Al Commmunity at IITB is adviced by Prof. Amit Sethi. He's the professor at Electrical
-                    Engineering dept. of IIT-Bombay and an adjunct faculty at Dept. of Pathology at University of
-                    Illinois, Chicago (UIC). His research interests lie in Deep learning, machine learning, image
-                    processing, computer vision and medical image analysis. You can get to know more about him
-                    by visitng his <a href="https://www.ee.iitb.ac.in/~asethi/" className="link">webpage</a>
-                    The work Al Community does is all made possible by a group of dedicated individuals
-                    enthusiastic about research and innovation in the field.
-                    </p>
-                </div>
-                <div>
-                    <img src={facAdimg} alt="prof" />
-                </div>
-            </div> 
+           
         </div>
     );
 }
