@@ -1,51 +1,78 @@
-.blog{
-    z-index: 10;
-    width: 96%;
-}
-
-.blog .oneBlogBox{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 100px;
-    width: 100%;
-    /* background: rgb(34,67,195);
-    background: linear-gradient(40deg, rgba(34,67,195,0.15) 0%, rgba(170,48,223,0.15) 100%); */
-    font-family: "Chakra Petch", sans-serif;
-    border-radius: 10px;
-    z-index:10;
-    margin: 1.5vh;
-    padding-left: 1vw;
-    color: white;
-}
-.blog .cont{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    width: 95%;
-}
-
-.blogdetails{
-    width: 100%;
-    background: rgb(34,67,195);
-    background: linear-gradient(40deg, rgba(34,67,195,0.15) 0%, rgba(170,48,223,0.15) 100%);
-    font-family: "Chakra Petch", sans-serif;
-    padding: 2rem;
-    margin-top: 1rem;
-    border-radius: 10px;
-    color: white;
-}
-
-.blogdetails .blog_body{
-    font-family: monospace;
-    width: 100%;
+.whitespace-pre-wrap *{
     font-size: 1rem;
-    margin-top: 2rem;
-    word-wrap: normal;
+    font-weight: 400;
 }
 
-.blogdetails .blog_body a{
-    color: white;
-    text-decoration: underline;
+.whitespace-pre-wrap h1{
+    font-size: 1.5rem;
+    font-weight: 900;
 }
+
+.whitespace-pre-wrap h2{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.whitespace-pre-wrap h3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.whitespace-pre-wrap h4{
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.whitespace-pre-wrap h5{
+    font-size: 0.75rem;
+    font-weight: 700;
+}  
+
+.whitespace-pre-wrap h6{
+    font-size: 0.625rem;
+    font-weight: 700;
+}
+
+.whitespace-pre-wrap p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.whitespace-pre-wrap a{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.whitespace-pre-wrap ul{
+    font-size: 1rem;
+    font-weight: 400;
+    list-style: disc;
+    padding: 0 0 0 1.5rem;
+}
+
+.whitespace-pre-wrap ol{
+    font-size: 1rem;
+    font-weight: 400;
+    list-style: decimal;
+    padding: 0 0 0 1.5rem;
+}
+
+.whitespace-pre-wrap li{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.whitespace-pre-wrap blockquote{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.whitespace-pre-wrap code{
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: rgba(100, 100, 100, 0.5);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+
+}
+

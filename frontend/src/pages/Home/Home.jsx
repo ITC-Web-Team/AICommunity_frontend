@@ -3,14 +3,13 @@ import img from "../../assets/img.jpg";
 import right from "../../assets/right.png";
 import image from "../../assets/image.png";
 import { Link } from "react-router-dom";
-import facAdimg from "../../assets/bg_removed_amit_sethi.png"
 import { TypeAnimation } from 'react-type-animation';
 
 
 
 export default function Home() {
     return (
-        <div className="flex flex-col bg-black">
+        <div className="flex flex-col">
             <div className="w-full m-8" >
                 <div className="w-11/12 h-80 rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-5">
                     <div className="text-4xl text-green-500 font-sans">Hey AI Enthusiast!</div>
@@ -23,10 +22,16 @@ export default function Home() {
                                     sequence={[
                                         'Community, IITB',
                                         1000, 
+                                        "",
+                                        500,
                                         'innovation and mentorship centre',
                                         1000,
+                                        '',
+                                        500,
                                         'learning hub of IITB',
-                                        1000,
+                                        1000,   
+                                        '',
+                                        500,
                                     ]}
                                     wrapper="span"
                                     speed={50}
