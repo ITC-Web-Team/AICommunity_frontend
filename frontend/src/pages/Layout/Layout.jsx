@@ -22,7 +22,7 @@ export default function Layout({children}) {
         <div className="Navbar">
           {<Navbar/>}
         </div>
-        <div className="Children">
+        <div className="w-[70vw] mx-auto">
           {children}
         </div>
       </div>
