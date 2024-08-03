@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import './Team.css'
+// import './Team.css' 
 import { Linkedin, Github } from 'lucide-react'
 
 function Team() {

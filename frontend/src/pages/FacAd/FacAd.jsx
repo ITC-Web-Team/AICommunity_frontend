@@ -1,5 +1,5 @@
 import React from 'react';
-import './FacAd.css'; 
+// import './FacAd.css'; 
 import facAdimg from '../../assets/bg_removed_amit_sethi.png'; 
 
 const FacultyAdvisor = () => {

@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Blog, Member 
+from .models import*
 
-class Blog_all_Serializer(serializers.ModelSerializer):
+class BlogAllSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
-        fields = ["id","title", "authors","date"]
+        fields = ["id","title","authors","date"]
 
     def create(self, validated_data):
         return Blog.objects.create(**validated_data)
@@ -18,7 +18,7 @@ class Blog_all_Serializer(serializers.ModelSerializer):
         return instance
     
 
-class Blog_specific_Serializer(serializers.ModelSerializer):
+class BlogSpecificSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
         fields = '__all__'
@@ -49,6 +49,23 @@ class MemberSerializer(serializers.ModelSerializer):
         instance.phone=validated_data.get('phone', instance.phone)
         instance.linkedin=validated_data.get('linkedin', instance.linkedin)
         instance.github=validated_data.get('github', instance.github)
+        instance.pic=validated_data.get('pic', instance.pic)
+        instance.save()
+        return instance
+    
+
+class ProjectAllSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Project
+        fields = '__all__'
+
+    def create(self, validated_data):
+        return Blog.objects.create(**validated_data)
+        
+    def update(self, instance, validated_data):
+        instance.title=validated_data.get('title', instance.title)
+        instance.authors=validated_data.get('authors', instance.authors)
+        instance.content=validated_data.get('content', instance.content)
         instance.pic=validated_data.get('pic', instance.pic)
         instance.save()
         return instance
