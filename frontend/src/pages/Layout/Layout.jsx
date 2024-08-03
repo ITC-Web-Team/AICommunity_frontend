@@ -1,5 +1,5 @@
 import React from "react";
-import './layout.css';
+// import './layout.css';
 import { useEffect, useRef } from 'react';
 import bgVideo from '../../assets/video.mp4';
 import Navbar from "../Navbar/Navbar";
@@ -17,24 +17,15 @@ export default function Layout({children}) {
   }, []);
 
   return (
-    <div className="home">
-      <div className="overlay"></div>
-      <div className="container">
-      <Navbar />
-      <div className="base">
-      {children}
-      <Footer />
+    <div className="Background">
+      <div className="Content Area">
+        <div className="Navbar">
+          {<Navbar/>}
+        </div>
+        <div className="Children">
+          {children}
+        </div>
       </div>
-      </div>
-      
-        <video src={bgVideo}
-               autoPlay 
-               muted 
-               loop 
-               playsInline
-               ref={videoRef}
-               className="myVideo"/>
-              
     </div>
   );
 }
