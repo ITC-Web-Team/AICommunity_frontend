@@ -1,6 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from django.http import JsonResponse
 from .serializers import *
 from .models import*
 import markdown
@@ -20,18 +21,36 @@ def display_all(request):
 def display_blog(request, id):
     try:
         blog=Blog.objects.get(id=id)
+        data = BlogSpecificSerializer(blog).data
+        return Response(data=data, status=status.HTTP_200_OK)
+    
     except Blog.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-    blog.content = markdown.markdown(blog.content)
-    data=BlogSpecificSerializer(blog).data
-    return Response(data=data, status=status.HTTP_200_OK)
+        return Response(data={'error': 'Blog not found'}, status=status.HTTP_404_NOT_FOUND)
+
 
 #display members
 @api_view(['GET'])
 def display_members(request):
-    members=Member.objects.all()
-    data=MemberSerializer(members, many=True).data
-    return Response(data=data, status=status.HTTP_200_OK)
+    members = Member.objects.all()
+
+    # Group members by batch
+    batch_groups = {}
+    for member in members:
+        if member.batch not in batch_groups:
+            batch_groups[member.batch] = []
+        batch_groups[member.batch].append({
+            'name': member.name,
+            'position': member.position,
+            'priority': member.priority,
+            'email': member.email,
+            'phone': member.phone,
+            'linkedin': member.linkedin,
+            'github': member.github,
+            'pic': member.pic.url if member.pic else None,
+        })
+
+    return JsonResponse(batch_groups, safe=False)
+    
 
 #projects
 @api_view(['GET'])
