@@ -1,39 +1,44 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
-import './Team.css'
 import { Linkedin, Github } from 'lucide-react'
+import './Team.css'
 
 function Team() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
+
   useEffect(() => {
     axios.get(`http://localhost:8000/member`)
-    .then((response) => {
+      .then((response) => {
         setData(response.data)
         console.log(response.data)
-    })
-    .catch((error) => {
+      })
+      .catch((error) => {
         console.log(error)
         alert("Failed to fetch blog")
-    })
+      })
   }, [])
 
   return (
     <div className='team'>
       <h1>Our Team</h1>
       <div className='team-members'>
-      {/* sort data based on data.position  */}
-        {data.sort((a, b) => a.position - b.position).map((member) => (
-          <div className='team-member'>
-            {/* <img src={ "http://localhost:8000/" + member.pic} alt={member.name} /> */}
+        {data.sort((a, b) => {
+          if (b.year !== a.year) {
+            return b.year - a.year;
+          }
+          return a.position - b.position;
+        }).map((member) => (
+          <Link to={`/member/${member.id}`} key={member.id} className='team-member'>
             <div className='team-member-image'>
-              <img src={ "http://localhost:8000/" + member.pic} alt={member.name} />
+              <img src={"http://localhost:8000/" + member.pic} alt={member.name} />
             </div>
             <div className='team-member-details'>
               <h2>{member.name}</h2>
-              <p>
-                {member.position === '1' ? 'Founder' : member.position === '2' ? 'Manager' : member.position === '3' && 'Convener' }
-              </p>
+              <p>{member.position === '1' ? 'Founder' : member.position === '2' ? 'Manager' : member.position === '3' && 'Convener'} {member.year}</p>
+              <p>{member.department}</p>
               <p>{member.email}</p>
+              <p>{member.phone}</p>
               <span>
                 <a href={member.linkedin} target='_blank' rel='noreferrer'>
                   <Linkedin />
@@ -43,11 +48,11 @@ function Team() {
                 </a>
               </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Team
+export default Team;

@@ -1,7 +1,6 @@
-.team{
+.team {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
@@ -14,27 +13,42 @@
     margin: 1rem;
 }
 
-.team-meambers{
+.team-members {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+    position: relative;
 }
 
-.team .team-member{
+.team .team-member {
     width: 50%;
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    margin: 1rem 0;
     padding-left: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    background: linear-gradient(40deg, rgba(34,67,195,0.15) 0%, rgba(170,48,223,0.15) 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(40deg, rgba(34, 67, 195, 0.15) 0%, rgba(170, 48, 223, 0.15) 100%);
+    position: relative;
+    animation: fadeInUp 0.5s ease-in-out both;
 }
 
-.team .team-member .team-member-image{
+.team .team-member:nth-child(odd) {
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: auto;
+    animation-name: fadeInLeft;
+}
+
+.team .team-member:nth-child(even) {
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 0;
+    animation-name: fadeInRight;
+}
+
+.team .team-member .team-member-image {
     height: 100%;
     max-width: 30%;
     display: flex;
@@ -43,7 +57,7 @@
     color: white;
 }
 
-.team .team-member .team-member-image img{
+.team .team-member .team-member-image img {
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
@@ -51,7 +65,7 @@
     border: 1px solid #ccc;
 }
 
-.team .team-member .team-member-details{
+.team .team-member .team-member-details {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -60,26 +74,62 @@
     color: white;
 }
 
-.team .team-member .team-member-details h2{
+.team .team-member .team-member-details h2 {
     font-size: 1.5rem;
     font-family: "Chakra Petch", sans-serif;
     color: #fff;
 }
 
-.team .team-member .team-member-details p{
+.team .team-member .team-member-details p {
     font-size: 1rem;
     font-family: "Chakra Petch", sans-serif;
     color: #fff;
 }
 
-.team .team-member .team-member-details span{
+.team .team-member .team-member-details span {
     display: flex;
-
 }
 
-.team .team-member .team-member-details a{
+.team .team-member .team-member-details a {
     font-size: 1rem;
     font-family: "Chakra Petch", sans-serif;
     color: #fff;
     text-decoration: none;
+    margin-right: 10px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
