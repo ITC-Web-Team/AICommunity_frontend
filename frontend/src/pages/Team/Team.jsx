@@ -18,7 +18,7 @@ function Team() {
   }, []);
 
   return (
-    <div className='w-full flex flex-col gap-4 text-white'>
+    <div className='w-full flex flex-col p-10 gap-4 text-white'>
       <h1 className='text-4xl font-bold'>Our Team</h1>
       {Object.keys(data).length === 0 ? (
         <p>Loading...</p>
