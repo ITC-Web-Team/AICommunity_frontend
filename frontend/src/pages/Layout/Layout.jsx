@@ -20,7 +20,7 @@ export default function Layout({ children }) {
         <div className="mb-4">
           <Navbar />
         </div>
-        <div className="flex-grow p-4 overflow-hidden">
+        <div className="w-[70vw] mx-auto">
           {children}
         </div>
         <div className="mt-4">
