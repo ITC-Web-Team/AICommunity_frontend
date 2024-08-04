@@ -15,7 +15,7 @@ function Member() {
             })
             .catch((error) => {
                 console.log(error);
-                alert("Failed to fetch member details");
+                alert("Failed to fetch Member Details");
             });
     }, [id]);
 

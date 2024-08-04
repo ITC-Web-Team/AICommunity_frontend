@@ -15,7 +15,7 @@ function Team() {
       })
       .catch((error) => {
         console.log(error)
-        alert("Failed to fetch blog")
+        alert("Failed to fetch Team Members")
       })
   }, [])
 
@@ -29,10 +29,10 @@ function Team() {
           }
           return a.position - b.position;
         }).map((member) => (
-          <Link to={`/member/${member.id}`} key={member.id} className='team-member'>
-            <div className='team-member-image'>
+          <div className='team-member' key={member.id}>
+            <Link to={`/member/${member.id}`} className='team-member-image'>
               <img src={"http://localhost:8000/" + member.pic} alt={member.name} />
-            </div>
+            </Link>
             <div className='team-member-details'>
               <h2>{member.name}</h2>
               <p>{member.position === '1' ? 'Founder' : member.position === '2' ? 'Manager' : member.position === '3' && 'Convener'} {member.year}</p>
@@ -48,7 +48,7 @@ function Team() {
                 </a>
               </span>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
