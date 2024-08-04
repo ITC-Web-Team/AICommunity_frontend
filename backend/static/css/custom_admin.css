@@ -1,0 +1,30 @@
+/* Custom Admin Styles */
+.tab-content input, textarea {
+    background-color: #000000 !important; /* Black background */
+    color: #ffffff !important; /* White text */
+    border: 1px solid #ffffff !important; /* White border */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    margin: auto !important;
+}
+
+.brand-link:hover {
+    background-color: #facc15 !important; /* Tailwind `yellow-400` color */
+}
+
+#id_tags {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000000 !important; /* Black background */
+    color: #ffffff !important; /* White text */
+}
+
+#changelist-search .form-group {
+    margin: 10px !important;
+}
+
+.alert-success a {
+    color: #ffffff !important; /* White text */
+}

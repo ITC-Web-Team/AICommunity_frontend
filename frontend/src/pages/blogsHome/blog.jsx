@@ -1,5 +1,4 @@
 import React, { useEffect , useState} from "react";
-import './blog.css';
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -20,21 +19,21 @@ export default function Blog() {
     }); 
   } , []);
 
-  return ( 
-    <div className="blog" >
-      <div className = "blogsContainer" >
+  return (
+      <div className = "flex flex-col gap-4">
         {blogs.map((blog) => {
           return (
-            <Link to={'/blog/' + blog.id} className="oneBlogBox">
+            <Link to={'/blog/' + blog.id} className="text-white bg-gray-800 p-4 rounded-lg" key={blog.id}>
               <h1>{blog.title}</h1>
               <div className="cont">
                 <p>{blog.authors}</p>
-                <p>{blog.date}</p>
+                <p>{Date(blog.date)}</p>
               </div>
             </Link>
           )
-        })}
+        }
+        )}
       </div>
-    </div>
   );
+            
 }

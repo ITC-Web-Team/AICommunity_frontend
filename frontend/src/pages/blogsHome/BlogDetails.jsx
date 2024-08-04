@@ -8,7 +8,7 @@ function BlogDetails() {
     const {id}=useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/blog/${id}`)
+        axios.get(`http://localhost:8000/blogs/${id}`)
         .then((response) => {
             setBlog(response.data)
             console.log(response.data)
@@ -20,15 +20,15 @@ function BlogDetails() {
     }, [id])
 
   return (
-    <div className='blogdetails' >
-        <h1>{blog.title}</h1>
-        <div className="cont">
+    <div className='w-full flex flex-col gap-4 text-white' >
+        <h1 className='text-2xl font-bold'>{blog.title}</h1>
+        <div className="flex gap-4">
             <p>{blog.authors}</p>
-            <p>{blog.date}</p>
+            <p>{Date(blog.date)}</p>
         </div>
-        <p className='blog_body'>
-            <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
-                <div dangerouslySetInnerHTML={{ __html: blog. content }} />
+        <p className='text-white bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)]  p-4 rounded-lg'>
+            <pre className='whitespace-pre-wrap'>
+                <div dangerouslySetInnerHTML={{ __html: blog.html }} />
             </pre>
         </p>
        

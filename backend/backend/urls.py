@@ -15,14 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-import os 
+from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from database.views import *
+
+admin.site.site_header = 'By ITC Web Team'
 
 urlpatterns = [
-    
+    path('blogs/', display_all),
+    path('blogs/<int:id>/', display_blog),
+    path('member/', display_members),
+    path('projects/', display_projects),
     path('admin/', admin.site.urls),
-    path('', include('blogs.urls')),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -1,18 +1,12 @@
 import React , {useEffect, useState} from "react";
-import logo from "../../assets/logo.png";
-import menu from "../../assets/menu.png";
-import './Navbar.css';
 import { Link, useLocation } from "react-router-dom";
+import logo from '../../assets/logo.png';
 
 export default function Navbar() {
   const [isOpen , setIsOpen] = useState(false);
   const [active, setActive] = useState('');
 
   const location = useLocation();
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  }
 
   const updateActive = (route) => {
     setActive(route);
@@ -24,20 +18,55 @@ export default function Navbar() {
     setActive(activeRoute);
   }, [location]);
   return (
+    <div className="navbar flex pt-4 px-4 gap-10 border-b-[.1em] border-[rgba(255,255,255,.2)]">
+      <Link to="/" className="w-20 h-20">
+        <img className="w-20 h-20" src={logo} alt="AIC" />
+      </Link>
+      <div className="flex flex-col justify-end h-20 gap-2 text-white relative">
+        <div className="flex gap-4">
+          {data.map((item) => (
+            <Link
+              key={item.name}
+              to={item.route}
+              className={`${
+                active === item.route.split('/')[1] ? 'text-[#FFD700]' : ''
+              }`}
+              onClick={() => updateActive(item.route.split('/')[1])}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link to="http://127.0.0.1:8000/admin">Login</Link>
 
-    <div className="navbar">
-      <div className="navbar_logo_container">
-        <Link to="/" className="navbar_logo"><img className="logo_img" src={logo} alt="AIC" /></Link>
+        </div>
       </div>
-      <div className="navbar_heading">AI COMMUNITY</div>
-      <div className={`navbar__links ${isOpen ? 'open' : ''}`}>
-        <Link to="/" className={`navbar__link ${active === '' && 'active'}`} onClick={() => updateActive('')}> Home </Link>
-        <Link to="/blogs" className={`navbar__link ${active === 'blogs' && 'active'}`} onClick={() => updateActive('blogs')}> Blogs </Link>
-        <Link to="/ourteam" className={`navbar__link ${active === 'team' && 'active'}`} onClick={() => updateActive('team')}> Our Team </Link>
-        <Link to="/projects" className={`navbar__link ${active === 'projects' && 'active'}`} onClick={() => updateActive('projects')}> Projects </Link>
-        <Link to="/FacAd" className={`navbar__link ${active === 'FacAd' && 'active'}`} onClick={() => updateActive('FacAd')}> Faculty Advisor </Link>
-      </div>
-      <div className="navbar__toggle" onClick={handleToggle}><img src={menu} className="menu_logo"/></div>
     </div>
   );
 }
+
+const data = [
+  {
+    name: "Home",
+    route: "/",
+  },
+  {
+    name: "Blogs",
+    route: "/blogs",
+  },
+  {
+    name: "Projects",
+    route: "/projects",
+  },
+  {
+    name: "OurTeam",
+    route: "/ourteam",
+  },
+  {
+    name: "FacultyAdvisor",
+    route: "/FacAd",
+  },
+  // {
+  //   name: "Login",
+  //   route: "http://127.0.0.1:8000/admin"
+  // }
+]

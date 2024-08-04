@@ -1,13 +1,10 @@
-import React from "react";
-import './layout.css';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 import bgVideo from '../../assets/video.mp4';
 import Navbar from "../Navbar/Navbar";
 import Footer from '../footer/footer.jsx';
+import VantaNet from "./VantaNet"; // Ensure the import path is correct
 
-
-export default function Layout({children}) {
-
+export default function Layout({ children }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -17,24 +14,19 @@ export default function Layout({children}) {
   }, []);
 
   return (
-    <div className="home">
-      <div className="overlay"></div>
-      <div className="container">
-      <Navbar />
-      <div className="base">
-      {children}
+    <div className="min-h-screen flex flex-col">
+      <VantaNet />
+      <div className="w-full max-w-5xl mx-auto mt-10 rounded-lg overflow-hidden border-2 border-white bg-black">
+        <div className="mb-4">
+          <Navbar />
+        </div>
+        <div className="flex-grow p-4 overflow-hidden">
+          {children}
+        </div>
+        <div className="mt-4">
+        </div>
+      </div>
       <Footer />
-      </div>
-      </div>
-      
-        <video src={bgVideo}
-               autoPlay 
-               muted 
-               loop 
-               playsInline
-               ref={videoRef}
-               className="myVideo"/>
-              
     </div>
   );
 }
