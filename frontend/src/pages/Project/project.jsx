@@ -22,13 +22,11 @@ function Project() {
             data.map((project) => {
                 return (
                     <div className="text-white bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)]  p-4 rounded-lg flex gap-4" key={project.name}>
-                        <span>
-                            <h1 
-                                className='text-2xl font-bold'
-                            >{project.name}</h1>
+                        <span className='flex flex-col w-1/2'>
+                            <h1 className='text-2xl font-bold'>{project.title}</h1>
                             <p>{project.description}</p>
                         </span>
-                        <a href={project.link}>
+                        <a href={project.link} className='w-1/2 h-1/2'>
                             <img 
                                 src={`http://localhost:8000${project.img}`}
                                 alt={project.name} 
