@@ -99,12 +99,107 @@ Today, the AI Community, IITB continues to grow and evolve. We remain committed 
 
             <div className="w-11/12 h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-5 m-8">
                 <div className="font-pressStart text-5xl text-green-500  text-center">Events</div><br/>
-                <div className="text-white text-2xl font-sans">Coming Soon!</div>
+                <div className="text-white text-2xl font-sans">Clash of T-AI-TANS hackathon</div>
             </div>
 
             <div className="w-11/12 h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-5 m-8">
                 <div className="font-pressStart text-5xl text-green-500  text-center">Resources</div><br/>
-                <div className="text-white text-2xl font-sans">Learning Technologies</div>
+                <div className="text-white text-2xl font-sans">
+                    <ul>
+                        <li>Foundational Concepts
+                            <li>Introduction to Artificial Intelligence
+                                <li>Overview of AI and its history</li>
+                                <li>Key concepts and terminology</li>
+                            </li>
+                            <li>Machine Learning Basics
+                                <li>Types of machine learning (supervised, unsupervised, reinforcement)</li>
+                                <li>Common algorithms and techniques</li>
+                            </li>
+                        </li>
+                        <li>Programming and Tools
+
+                            <li>Programming Languages for AI
+
+                                <li>Python for AI and machine learning
+                                </li>
+                                <li>R and other languages commonly used in AI
+                                </li>
+                            </li>
+                            <li>AI Development Tools and Frameworks
+                                <li>TensorFlow, PyTorch, and other popular frameworks</li>
+                                <li>Libraries for data manipulation and visualization (e.g., NumPy, Pandas, Matplotlib)</li>
+                            </li>
+                        </li>
+                        <li>Advanced Topics
+                            <li>Deep Learning
+                                <li>Neural networks and architectures (CNNs, RNNs, LSTMs)</li>
+                                <li>Techniques for training deep models</li>
+                            </li>
+                            <li>Natural Language Processing (NLP)
+                                <li>Text analysis and processing</li>
+                                <li>Sentiment analysis, language translation, and chatbots</li>
+                            </li>
+                            <li>Computer Vision
+                                <li>Image recognition and classification</li>
+                                <li>Object detection and image generation</li>
+                            </li>
+                        </li>
+                        <li>Specialized Areas
+
+                            <li>Reinforcement Learning
+                                <li>Concepts and applications</li>
+                                <li>Key algorithms (Q-learning, Deep Q-Networks)</li>
+                            </li>
+                            <li>AI in Robotics
+                                <li>Integration of AI in robotic systems</li>
+                                <li>Applications and challenges in robotics</li>
+                            </li>
+                        </li>
+                        <li>Practical Applications
+                            <li>AI in Healthcare
+                                <li>Diagnosis, treatment recommendations, and personalized medicine</li>
+                            </li>
+                            <li>AI in Finance
+                                <li>Algorithmic trading, fraud detection, and risk assessment</li>
+                                
+                            </li>
+                            <li>AI in Autonomous Vehicles
+                                <li>Self-driving technology and its challenges</li>
+                            </li>
+                        </li>
+                        <li>Ethical and Societal Considerations
+                            <li>Ethics in AI
+                                <li>Fairness, transparency, and accountability in AI systems</li>
+                                
+                            </li>
+                            <li>Impact of AI on Society
+                                <li>AI’s influence on job markets and privacy concerns</li>
+                                
+                            </li>
+                        </li>
+                        <li>Career and Professional Development
+                            <li>Building a Career in AI
+                                <li>Skills and qualifications needed for AI roles</li>
+                                <li>Career paths and job opportunities</li>
+                            </li>
+                            <li>Networking and Community Building
+                                
+                                <li>Joining AI communities and attending conferences</li>
+                            </li>
+                        </li>
+                        <li>Tutorials and Courses
+                            <li>Online AI Courses
+                                <li>Recommendations for MOOCs and tutorials
+                                </li>
+                                
+                            </li>
+                            <li>Hands-on Projects
+                                <li>Project ideas for practical experience</li>
+                                
+                            </li>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div className="w-11/12 h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-5 m-8">
