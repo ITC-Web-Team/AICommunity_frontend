@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import *
-from .models import Blog, Member
+from .models import*
 import markdown
 import django.http
 
@@ -10,7 +10,7 @@ import django.http
 @api_view(['GET'])
 def display_all(request):
     blogs=Blog.objects.all()
-    data=Blog_all_Serializer(blogs, many=True).data
+    data=BlogAllSerializer(blogs, many=True).data
     
     return Response(data=data, status=status.HTTP_200_OK)
 
@@ -18,13 +18,12 @@ def display_all(request):
 #specific blog
 @api_view(['GET'])
 def display_blog(request, id):
-    
     try:
-        blogs=Blog.objects.get(id=id)
+        blog=Blog.objects.get(id=id)
     except Blog.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
-    blogs.content = markdown.markdown(blogs.content)
-    data=Blog_specific_Serializer(blogs).data
+    blog.content = markdown.markdown(blog.content)
+    data=BlogSpecificSerializer(blog).data
     return Response(data=data, status=status.HTTP_200_OK)
 
 #display members
@@ -34,7 +33,13 @@ def display_members(request):
     data=MemberSerializer(members, many=True).data
     return Response(data=data, status=status.HTTP_200_OK)
 
-
+#projects
+@api_view(['GET'])
+def display_projects(request):
+    project = Project.objects.all() 
+    data = ProjectAllSerializer(project, many=True).data
+    
+    return Response(data=data, status=status.HTTP_200_OK)
 
     
     

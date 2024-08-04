@@ -1,4 +1,5 @@
 from django.db import models
+import markdown
 
 choices={"1":"Founder","2":"Manager","3":"Convener"}
 
@@ -10,6 +11,7 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
 
 class Member(models.Model):
     name=models.CharField(max_length=100, default=None)
@@ -22,3 +24,17 @@ class Member(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class Project(models.Model):
+    title = models.CharField(max_length = 100, default = None)
+    img =models.ImageField(upload_to= './', default=None)
+    link = models.URLField(max_length=100, default=None)
+    description = models.TextField(default = None)
+    
+    
+    def __str__(self):
+        return self.title
+
+

@@ -20,9 +20,12 @@ import os
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+admin.site.site_header = 'By ITC Web Team'
+
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    path('', include('blogs.urls')),
+    path('', include('database.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
