@@ -45,7 +45,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
+            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center">
                 <h1 className="font-pressStart text-xl mb-2 text-green-500 underline">Our Mission</h1>
                 <div className="text-white text-lg font-sans">
                 At <span className="text-yellow-400">AICommunity IITB</span>, we are dedicated to fostering a vibrant and inclusive community for everyone interested in artificial intelligence. Our mission is to empower individuals to explore, learn, and collaborate in the rapidly evolving field of <span className="text-yellow-400">AI</span>. We believe that by bringing together people with diverse backgrounds and expertise, we can drive innovation and create positive impacts on society.
@@ -63,9 +63,13 @@ export default function Home() {
                 </div>
             </div>
 
+            <span className="flex justify-end">
+                <img src='./img/virus.png' alt="virus" className="w-16 h-16"/>
+            </span>
+
                 
             <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
-                <h1 className="font-pressStart text-xl mb-2 text-green-500 underline">Our History</h1>
+                <h1 className="font-pressStart text-xl mb-2 text-green-500 underline flex justify-between align-text-bottom">Our History</h1>
                 <p className="text-white text-lg font-sans">
                     <span className="text-yellow-400">AICommunity IITB</span> was founded with the vision of creating a collaborative environment for <span className="underline">students</span>, <span className="underline">researchers</span>, and <span className="underline">faculty</span> passionate about artificial intelligence. Recognizing the transformative potential of AI, a group of dedicated professors and students initiated the community to facilitate learning, research, and innovation within the institute.
                     </p>
@@ -81,117 +85,200 @@ export default function Home() {
                     </div>
             </div>
 
-            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-5 m-8">
-                <div className="font-pressStart text-5xl text-green-500  text-center">Events</div><br/>
+            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
+                <h1 className="font-pressStart text-xl mb-2 text-green-500 underline flex justify-between align-text-bottom">Events</h1>
                 <div className="text-white text-2xl font-sans">Clash of T-AI-TANS hackathon</div>
             </div>
 
-            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-5 m-8">
-                <div className="font-pressStart text-5xl text-green-500  text-center">Resources</div><br/>
+
+            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
+                <h1 className="font-pressStart text-xl mb-2 text-green-500 underline flex justify-between align-text-bottom">Resources</h1>
                 <div className="text-white text-lg font-sans">
-                    <ul>
-                        <li>Foundational Concepts
-                            <li>Introduction to Artificial Intelligence
-                                <li>Overview of AI and its history</li>
-                                <li>Key concepts and terminology</li>
+                <div className="p-8">
+                    <ul className="list-disc ml-6">
+                        <li className="mb-2 underline">
+                        Foundational Concepts
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            Introduction to Artificial Intelligence
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Overview of AI and its history</li>
+                                <li className="mb-1">Key concepts and terminology</li>
+                            </ul>
                             </li>
-                            <li>Machine Learning Basics
-                                <li>Types of machine learning (supervised, unsupervised, reinforcement)</li>
-                                <li>Common algorithms and techniques</li>
+                            <li className="mb-1">
+                            Machine Learning Basics
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Types of machine learning (supervised, unsupervised, reinforcement)</li>
+                                <li className="mb-1">Common algorithms and techniques</li>
+                            </ul>
                             </li>
+                        </ul>
                         </li>
-                        <li>Programming and Tools
 
-                            <li>Programming Languages for AI
+                        <li className="mb-2 underline">
+                        Programming and Tools
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            Programming Languages for AI
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Python for AI and machine learning</li>
+                                <li className="mb-1">R and other languages commonly used in AI</li>
+                            </ul>
+                            </li>
+                            <li className="mb-1">
+                            AI Development Tools and Frameworks
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">TensorFlow, PyTorch, and other popular frameworks</li>
+                                <li className="mb-1">Libraries for data manipulation and visualization (e.g., NumPy, Pandas, Matplotlib)</li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
 
-                                <li>Python for AI and machine learning
-                                </li>
-                                <li>R and other languages commonly used in AI
-                                </li>
+                        <li className="mb-2 underline">
+                        Advanced Topics
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            Deep Learning
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Neural networks and architectures (CNNs, RNNs, LSTMs)</li>
+                                <li className="mb-1">Techniques for training deep models</li>
+                            </ul>
                             </li>
-                            <li>AI Development Tools and Frameworks
-                                <li>TensorFlow, PyTorch, and other popular frameworks</li>
-                                <li>Libraries for data manipulation and visualization (e.g., NumPy, Pandas, Matplotlib)</li>
+                            <li className="mb-1">
+                            Natural Language Processing (NLP)
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Text analysis and processing</li>
+                                <li className="mb-1">Sentiment analysis, language translation, and chatbots</li>
+                            </ul>
                             </li>
+                            <li className="mb-1">
+                            Computer Vision
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Image recognition and classification</li>
+                                <li className="mb-1">Object detection and image generation</li>
+                            </ul>
+                            </li>
+                        </ul>
                         </li>
-                        <li>Advanced Topics
-                            <li>Deep Learning
-                                <li>Neural networks and architectures (CNNs, RNNs, LSTMs)</li>
-                                <li>Techniques for training deep models</li>
-                            </li>
-                            <li>Natural Language Processing (NLP)
-                                <li>Text analysis and processing</li>
-                                <li>Sentiment analysis, language translation, and chatbots</li>
-                            </li>
-                            <li>Computer Vision
-                                <li>Image recognition and classification</li>
-                                <li>Object detection and image generation</li>
-                            </li>
-                        </li>
-                        <li>Specialized Areas
 
-                            <li>Reinforcement Learning
-                                <li>Concepts and applications</li>
-                                <li>Key algorithms (Q-learning, Deep Q-Networks)</li>
+                        <li className="mb-2 underline">
+                        Specialized Areas
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            Reinforcement Learning
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Concepts and applications</li>
+                                <li className="mb-1">Key algorithms (Q-learning, Deep Q-Networks)</li>
+                            </ul>
                             </li>
-                            <li>AI in Robotics
-                                <li>Integration of AI in robotic systems</li>
-                                <li>Applications and challenges in robotics</li>
+                            <li className="mb-1">
+                            AI in Robotics
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Integration of AI in robotic systems</li>
+                                <li className="mb-1">Applications and challenges in robotics</li>
+                            </ul>
                             </li>
+                        </ul>
                         </li>
-                        <li>Practical Applications
-                            <li>AI in Healthcare
-                                <li>Diagnosis, treatment recommendations, and personalized medicine</li>
+
+                        <li className="mb-2 underline">
+                        Practical Applications
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            AI in Healthcare
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Diagnosis, treatment recommendations, and personalized medicine</li>
+                            </ul>
                             </li>
-                            <li>AI in Finance
-                                <li>Algorithmic trading, fraud detection, and risk assessment</li>
-                                
+                            <li className="mb-1">
+                            AI in Finance
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Algorithmic trading, fraud detection, and risk assessment</li>
+                            </ul>
                             </li>
-                            <li>AI in Autonomous Vehicles
-                                <li>Self-driving technology and its challenges</li>
+                            <li className="mb-1">
+                            AI in Autonomous Vehicles
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Self-driving technology and its challenges</li>
+                            </ul>
                             </li>
+                        </ul>
                         </li>
-                        <li>Ethical and Societal Considerations
-                            <li>Ethics in AI
-                                <li>Fairness, transparency, and accountability in AI systems</li>
-                                
+
+                        <li className="mb-2 underline">
+                        Ethical and Societal Considerations
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            Ethics in AI
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Fairness, transparency, and accountability in AI systems</li>
+                            </ul>
                             </li>
-                            <li>Impact of AI on Society
-                                <li>AI’s influence on job markets and privacy concerns</li>
-                                
+                            <li className="mb-1">
+                            Impact of AI on Society
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">AI’s influence on job markets and privacy concerns</li>
+                            </ul>
                             </li>
+                        </ul>
                         </li>
-                        <li>Career and Professional Development
-                            <li>Building a Career in AI
-                                <li>Skills and qualifications needed for AI roles</li>
-                                <li>Career paths and job opportunities</li>
+
+                        <li className="mb-2 underline">
+                        Career and Professional Development
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            Building a Career in AI
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Skills and qualifications needed for AI roles</li>
+                                <li className="mb-1">Career paths and job opportunities</li>
+                            </ul>
                             </li>
-                            <li>Networking and Community Building
-                                
-                                <li>Joining AI communities and attending conferences</li>
+                            <li className="mb-1">
+                            Networking and Community Building
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Joining AI communities and attending conferences</li>
+                            </ul>
                             </li>
+                        </ul>
                         </li>
-                        <li>Tutorials and Courses
-                            <li>Online AI Courses
-                                <li>Recommendations for MOOCs and tutorials
-                                </li>
-                                
+
+                        <li className="mb-2 underline">
+                        Tutorials and Courses
+                        <ul className="list-decimal ml-6">
+                            <li className="mb-1">
+                            Online AI Courses
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Recommendations for MOOCs and tutorials</li>
+                            </ul>
                             </li>
-                            <li>Hands-on Projects
-                                <li>Project ideas for practical experience</li>
-                                
+                            <li className="mb-1">
+                            Hands-on Projects
+                            <ul className="list-circle ml-6">
+                                <li className="mb-1">Project ideas for practical experience</li>
+                            </ul>
                             </li>
+                        </ul>
                         </li>
                     </ul>
+                    </div>
+
                 </div>
             </div>
-
-            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-5 m-8">
-                <div className="font-pressStart text-5xl text-green-500  text-center">Gallery</div><br/>
-                <div className="flex flex-col text-white p-8 justify-center mx-auto space-y-8">
-                    <img src={img1} alt="img1" style={{ width: '350px', height: '200px' }}/>
-                    <img src={img2} alt="img2" style={{ width: '350px', height: '200px' }}/>
-                    <img src={img3} alt="img3" style={{ width: '350px', height: '200px' }}/>
+            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
+                <h1 className="font-pressStart text-xl mb-2 text-green-500 underline flex justify-between align-text-bottom">
+                    Gallery
+                </h1>
+                <div className="flex text-wrap text-white p-8 align-middle gap-4">
+                    {galleryImages.map((image, index) => (
+                    <img
+                        key={index}
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-1/3 h-1/3 rounded-lg"
+                    />
+                    ))}
                 </div>
             </div>
         </div>
@@ -235,4 +322,10 @@ const missionPoints = [
       title: "Continuing Growth and Innovation",
       content: "Today, the AI Community, IITB continues to grow and evolve. We remain committed to fostering a supportive environment where members can learn, innovate, and collaborate. Our annual events, such as AI symposiums and workshops, have become key highlights in the institute’s calendar."
     }
+  ];
+
+  const galleryImages = [
+    { src: img1, alt: "img1" },
+    { src: img2, alt: "img2" },
+    { src: img3, alt: "img3" }
   ];
