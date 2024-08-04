@@ -2,6 +2,10 @@ import React from "react";
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpeg";
 import img3 from "../../assets/img3.jpg";
+import img from "../../assets/img.jpg";
+import right from "../../assets/right.png";
+import image from "../../assets/image.png";
+import { Link } from "react-router-dom";
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -20,11 +24,17 @@ export default function Home() {
                                     <TypeAnimation
                                     sequence={[
                                         'Community, IITB',
-                                        2000, 
+                                        1000, 
+                                        "",
+                                        500,
                                         'innovation at IITB',
-                                        2000,
+                                        1000,
+                                        '',
+                                        500,
                                         'learning hub of IITB',
-                                        2000,
+                                        1000,   
+                                        '',
+                                        500,
                                     ]}
                                     wrapper="span"
                                     speed={50}

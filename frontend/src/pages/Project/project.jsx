@@ -1,19 +1,36 @@
 import React from 'react'
-// import './project.css'
+import { useEffect , useState} from "react";
+import axios from "axios";
 
 function Project() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8000/projects/')
+        .then((response) => {
+            console.log(response.data);
+            setData(response.data);
+        }) 
+        .catch((error) => {
+            console.log(error);
+            alert("Failed to fetch projects");
+        }); 
+    },[]);
   return (
-    <div className="Project">
+    <div className="w-full flex flex-col gap-4">
         {
             data.map((project) => {
                 return (
-                    <div className="project_item ">
-                        <span>
-                            <h1 className='project_item_heading'>{project.name}</h1>
+                    <div className="text-white bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)]  p-4 rounded-lg flex gap-4" key={project.name}>
+                        <span className='flex flex-col w-1/2'>
+                            <h1 className='text-2xl font-bold'>{project.title}</h1>
                             <p>{project.description}</p>
                         </span>
-                        <a href={project.link}>
-                            <img src={project.img} alt={project.name} />
+                        <a href={project.link} className='w-1/2 h-1/2'>
+                            <img 
+                                src={`http://localhost:8000${project.img}`}
+                                alt={project.name} 
+                            />
                         </a>
                     </div>
                 )
@@ -25,13 +42,3 @@ function Project() {
 }
 
 export default Project
-
-
-const data = [
-    {
-        name : "InstiGPT",
-        description : "InstiGPT is a conversational chatbot developed by the AI Community of IIT Bombay. It is designed to provide information and engage in conversations related to IIT Bombay, its campus, academics, student life, and notable achievements. InstiGPT utilizes the Institute's data to generate informative and contextually relevant responses, aiming to assist users in their queries about IIT Bombay.",
-        img : "/img/instigpt.png",
-        link : "https://gymkhana.iitb.ac.in/instigpt/",
-    }
-]
