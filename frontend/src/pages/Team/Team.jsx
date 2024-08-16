@@ -27,7 +27,7 @@ function Team() {
           <div key={batch} className='flex flex-col gap-4'>
             <h2 className='text-3xl font-semibold'>{batch}</h2>
             {data[batch].sort((b,a) => a.priority - b.priority).map((member) => (
-              <div className='flex gap-4 bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)] p-4 rounded-lg' key={member.name}>
+              <div className='flex flex-col md:flex-row gap-4 bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)] p-4 rounded-lg' key={member.name}>
                 <div className='w-40 h-40'>
                   <img src={member.pic ? "http://localhost:8000/" + member.pic : '/path/to/default-image.jpg'} alt={member.name} className='w-full h-full object-cover rounded-full' />
                 </div>
