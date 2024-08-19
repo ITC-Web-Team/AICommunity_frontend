@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { useEffect , useState} from "react";
 import axios from "axios";
 
@@ -17,22 +18,24 @@ function Project() {
         }); 
     },[]);
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className=" flex  flex-wrap  gap-4">
         {
             data.map((project) => {
                 return (
-                    <div className="text-white bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)]  p-4 rounded-lg flex gap-4" key={project.name}>
-                        <span className='flex flex-col w-1/2'>
-                            <h1 className='text-2xl font-bold'>{project.title}</h1>
-                            <p>{project.description}</p>
-                        </span>
-                        <a href={project.link} className='w-1/2 h-1/2'>
-                            <img 
-                                src={`http://localhost:8000${project.img}`}
-                                alt={project.name} 
-                            />
-                        </a>
-                    </div>
+                    <Link to={'/project/' + project.id} className="text-white bg-gray-800 p-4 rounded-lg w-80" key={project.id}>
+                        <div className="text-white bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)]  p-4 rounded-lg flex flex-col gap-4" key={project.name}>
+                            <span className='flex flex-col w-1/2'>
+                                <h1 className='text-2xl font-bold'>{project.title}</h1>
+                                <p>{project.description}</p>
+                            </span>
+                            
+                                <img 
+                                    src={`http://localhost:8000${project.img}`}
+                                    alt={project.name} 
+                                />
+                            
+                        </div>
+                    </Link>
                 )
             })
         }

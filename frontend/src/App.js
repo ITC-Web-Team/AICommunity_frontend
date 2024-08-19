@@ -12,6 +12,7 @@ import Team from './pages/Team/Team.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
 import FacultyAdvisor from './pages/FacAd/FacAd.jsx';
 import Member from './pages/Member/Member.jsx';
+import ProjectReport from './pages/Project/ProjectReport.jsx';
 
 const pageTransition = {
   in: { opacity: 1, x: 0 },
@@ -52,6 +53,14 @@ function App() {
               element={
                 <motion.div initial="out" animate="in" exit="out" variants={pageTransition}>
                   <Project />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/project/:id"
+              element={
+                <motion.div initial="out" animate="in" exit="out" variants={pageTransition}>
+                  <ProjectReport />
                 </motion.div>
               }
             />

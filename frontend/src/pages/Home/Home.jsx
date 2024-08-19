@@ -12,13 +12,13 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
     return (
-        <div className="flex flex-col bg-black">
+        <div className="h-full flex flex-col bg-black">
             <div className="w-full m-8" >
                 <div className="w-full h-50 rounded-lg flex flex-col bg-opacity-50 p-8 justify-center gap-2 mb-0">
                     <div className="text-xl text-green-500 font-pressStart">Hey AI Enthusiast!</div>
-                        <div className="flex flex-row gap-2 mb-0">
+                        <div className="flex flex-col md:flex-row gap-2 mb-0">
                             <div className="text-xl font-bold text-white font-sans">Welcome to the</div> 
-                                <div className="text-xl text-yellow-400 font-sans font-extrabold">
+                                <div className="text-xl block text-yellow-400 font-sans font-extrabold">
                                     <TypeAnimation
                                     sequence={[
                                         'AI Community IITB',
@@ -50,9 +50,9 @@ export default function Home() {
                 <div className="text-white text-lg font-sans">
                 At <span className="text-yellow-400">AICommunity IITB</span>, we are dedicated to fostering a vibrant and inclusive community for everyone interested in artificial intelligence. Our mission is to empower individuals to explore, learn, and collaborate in the rapidly evolving field of <span className="text-yellow-400">AI</span>. We believe that by bringing together people with diverse backgrounds and expertise, we can drive innovation and create positive impacts on society.
 
-                <ul className="flex flex-wrap gap-2 mt-4">
+                <ul className="flex flex-wrap  gap-2 mt-4">
                 {missionPoints.map((point, index) => (
-                    <li key={index} className="text-white max-w-[49%] bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)] p-4 rounded-lg flex flex-col">
+                    <li key={index} className="text-white  md:max-w-[49%] bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)] p-4 rounded-lg flex flex-col">
                     <div className="text-lg text-green-500 text-center">{point.title}</div>
                     <p className="text-white text-sm">{point.content}</p>
                     </li>
@@ -71,7 +71,7 @@ export default function Home() {
             <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
                 <h1 className="font-pressStart text-xl mb-2 text-green-500 underline flex justify-between align-text-bottom">Our History</h1>
                 <p className="text-white text-lg font-sans">
-                    <span className="text-yellow-400">AICommunity IITB</span> was founded with the vision of creating a collaborative environment for <span className="underline">students</span>, <span className="underline">researchers</span>, and <span className="underline">faculty</span> passionate about artificial intelligence. Recognizing the transformative potential of AI, a group of dedicated professors and students initiated the community to facilitate learning, research, and innovation within the institute.
+                    <span className="text-yellow-400">AICommunity IITB</span> was founded with the vision of creating a collaborative environment for <span className="underline">students</span> passionate about artificial intelligence.Our founding members are <Link className="underline" to="https://www.linkedin.com/in/nikhiltiwari-iitb/" >Nikhil Tiwari</Link>, <Link className="underline" to="https://www.linkedin.com/in/vishruth-n/" >Vishruth N.</Link>  they had a vision to build a community…. then the ‘’torch’’ was passed down to <Link className="underline" to="https://linkedin.com/in/navyanshmahla" >Navyansh Mahla</Link> and <Link className="underline" to="https://www.linkedin.com/in/amankhande/" >Aman Khande</Link> now finally to us… keeping the original ideas and thought process alive…
                     </p>
                     <ol className="list-decimal mt-4">
                     {historyPoints.map((point, index) => (
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
 
 
-            <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
+            {/* <div className="md:w-full w-[100vw] h-auto rounded-lg flex flex-col bg-opacity-50 pr-4 md:p-8 justify-center mb-8">
                 <h1 className="font-pressStart text-xl mb-2 text-green-500 underline flex justify-between align-text-bottom">Resources</h1>
                 <div className="text-white text-lg font-sans">
                 <div className="p-8">
@@ -265,18 +265,18 @@ export default function Home() {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
             <div className="w-full h-auto rounded-lg flex flex-col bg-opacity-50 p-8 justify-center mb-8">
                 <h1 className="font-pressStart text-xl mb-2 text-green-500 underline flex justify-between align-text-bottom">
                     Gallery
                 </h1>
-                <div className="flex text-wrap text-white p-8 align-middle gap-4">
+                <div className="flex flex-col md:flex-row text-wrap  text-white p-8 align-middle gap-4">
                     {galleryImages.map((image, index) => (
                     <img
                         key={index}
                         src={image.src}
                         alt={image.alt}
-                        className="w-1/3 h-1/3 rounded-lg"
+                        className=" md:w-1/3 md:h-1/3 rounded-lg"
                     />
                     ))}
                 </div>
@@ -291,16 +291,16 @@ export default function Home() {
 
 const missionPoints = [
     {
-      title: "Education and Accessibility",
-      content: "We aim to make AI knowledge and resources accessible to everyone, regardless of their prior experience. Through workshops, webinars, and online courses, we provide opportunities for learning and skill development."
+      title: "Blogs and Technical Reports",
+      content: "We document our work meticulously and maintain a systematic pipeline. Regular blogs keep everyone updated on the latest AI and machine learning trends, ensuring continuous engagement and knowledge sharing."
     },
     {
       title: "Collaboration and Innovation",
       content: "We encourage collaboration among our members to spark creativity and innovation. By connecting students, professionals, and enthusiasts, we create a space where ideas can be shared, and projects can flourish."
     },
     {
-      title: "Ethical AI Development",
-      content: "We are committed to promoting ethical AI practices. Our community advocates for responsible AI development that respects privacy, ensures transparency, and prioritizes fairness."
+      title: "Hackathons",
+      content: "We collaborate with partners to host hackathons of varying difficulty levels, making them accessible for everyone to engage and reach effective solutions. Additionally, we actively participate in many high-prep hackathons."
     },
     {
       title: "Supportive Network",

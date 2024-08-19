@@ -60,5 +60,14 @@ def display_projects(request):
     
     return Response(data=data, status=status.HTTP_200_OK)
 
+#singleproject project report
+@api_view(['GET'])
+def display_project(request, id):
+    try:
+        project=Project.objects.get(id=id)
+        data = ProjectSpecificSerializer(project).data
+        return Response(data=data, status=status.HTTP_200_OK)
     
+    except project.DoesNotExist:
+        return Response(data={'error': 'Project not found'}, status=status.HTTP_404_NOT_FOUND)   
     

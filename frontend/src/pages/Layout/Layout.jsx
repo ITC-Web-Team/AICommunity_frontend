@@ -14,9 +14,9 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen overflow-x-hidden flex flex-col">
       <VantaNet />
-      <div className="w-full max-w-5xl mx-auto mt-10 rounded-lg overflow-hidden border-2 border-white bg-black">
+      <div className="w-full max-w-5xl mx-auto mt-10 rounded-lg border-2 border-white bg-black">
         <div className="mb-4">
           <Navbar />
         </div>
