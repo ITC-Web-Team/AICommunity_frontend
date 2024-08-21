@@ -18,21 +18,24 @@ function Project() {
         }); 
     },[]);
   return (
-    <div className=" flex  flex-wrap  gap-4">
+    <div className=" flex  flex-wrap gap-4 justify-center">
         {
             data.map((project) => {
                 return (
+                    
                     <Link to={'/project/' + project.id} className="text-white bg-gray-800 p-4 rounded-lg w-80" key={project.id}>
-                        <div className="text-white bg-[rgba(50,50,50,.3)] hover:bg-[rgba(50,50,50,.5)]  p-4 rounded-lg flex flex-col gap-4" key={project.name}>
-                            <span className='flex flex-col w-1/2'>
-                                <h1 className='text-2xl font-bold'>{project.title}</h1>
-                                <p>{project.description}</p>
-                            </span>
-                            
-                                <img 
+                        <img 
                                     src={`http://localhost:8000${project.img}`}
                                     alt={project.name} 
+                                    className = 'w-full h-28'
                                 />
+                        <div className="text-white hover:bg-[rgba(50,50,50,.5)]  p-4 rounded-lg flex flex-col gap-4" key={project.name}>
+                            <span className='flex flex-col w-1/2'>
+                                <h1 className='text-2xl font-bold'>{project.title}</h1>
+                                <p className=''>{project.description}</p>
+                            </span>
+                            
+                                
                             
                         </div>
                     </Link>

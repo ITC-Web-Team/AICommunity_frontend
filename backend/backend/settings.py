@@ -135,7 +135,7 @@ JAZZMIN_SETTINGS = {
     "site_title": "AICommunity",
     "site_brand": "AICommunity",
     "site_icon": "http://127.0.0.1:8000/media/images/logo.png",
-    "welcome_sign": "Welcome to the AICommunity",
+    "welcome_sign": "Login for Admins and Maintainers",
     "copyright": "ITC Web Team",
 }
 
